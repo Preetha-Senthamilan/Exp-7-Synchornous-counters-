@@ -51,21 +51,55 @@ This type of counter is normally referred to as a Down Counter, (CTD). In a bina
 
 
 ### PROGRAM 
-/*
+
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
+Developed by: PREETHA.S
+RegisterNumber: 212222230110
+```
+UP COUNTER
+
+module upcount(clock,reset,up);
+input clock,reset;
+output reg[0:2] up;
+always@(posedge clock or posedge reset)
+begin
+if(reset)
+up=3'b 000;
+else
+up=up+1;
+end
+endmodule
 
 
+DOWN COUNTER
+
+module downcount(clock,reset,down);
+input clock,reset;
+output reg[2:0] down;
+always@(posedge clock or posedge reset)
+begin
+if(reset)
+down=3'b 111;
+else
+down=down-1;
+end
+endmodule
+
+```
 
 
 
 
 ### RTL LOGIC UP COUNTER AND DOWN COUNTER  
 
+UP COUNTER
+
+![image](https://github.com/Preetha-Senthamilan/Exp-7-Synchornous-counters-/assets/119390282/736a517a-6587-4749-8ba6-7e32037240eb)
 
 
+DOWN COUNTER
+
+![image](https://github.com/Preetha-Senthamilan/Exp-7-Synchornous-counters-/assets/119390282/d4356201-1177-4e4c-8109-9e125e48169c)
 
 
 
@@ -74,15 +108,30 @@ RegisterNumber:
 
 ### TIMING DIGRAMS FOR COUNTER  
 
+UP COUNTER
 
+![image](https://github.com/Preetha-Senthamilan/Exp-7-Synchornous-counters-/assets/119390282/d84a50e1-8041-430d-bcf6-04646e99b808)
+
+
+
+DOWN COUNTER
+
+![image](https://github.com/Preetha-Senthamilan/Exp-7-Synchornous-counters-/assets/119390282/04c706be-5dc4-4080-aa8e-8321ea2fb17b)
 
 
 
 ### TRUTH TABLE 
 
+UP COUNTER
 
+![image](https://github.com/Preetha-Senthamilan/Exp-7-Synchornous-counters-/assets/119390282/79ed8893-5ba4-41da-9c42-41ab6a7d5229)
 
+DOWN COUNTER
+
+![image](https://github.com/Preetha-Senthamilan/Exp-7-Synchornous-counters-/assets/119390282/246a8cfd-4d09-4e91-a146-33f6b21a49b9)
 
 
 
 ### RESULTS 
+
+Thus 3 bit up and down counters is implemented and its functionality is validated.
